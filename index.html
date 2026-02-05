@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Daniela 💗 Alex</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg,#ff7eb3,#ff758c,#ff7eb3);
+    color:white;
+}
+
+/* LOGIN */
+#login{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+input{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin:10px;
+}
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#fff;
+    color:#ff4d6d;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* NAV */
+nav{
+    background:rgba(0,0,0,0.25);
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+nav a{
+    color:white;
+    margin:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 20px;
+    max-width:900px;
+    margin:auto;
+}
+
+h1{font-size:40px}
+h2{margin-top:60px}
+
+.galeria img{
+    width:200px;
+    border-radius:15px;
+    margin:10px;
+}
+
+#contenido{display:none}
+</style>
+</head>
+
+<body>
+
+<div id="login">
+    <h1>💗 Nuestra página secreta 💗</h1>
+    <p>Ingresa la contraseña</p>
+    <input type="password" id="pass">
+    <br>
+    <button onclick="entrar()">Entrar</button>
+</div>
+
+<div id="contenido">
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#historia">Nuestra historia</a>
+<a href="#momentos">Momentos juntos</a>
+<a href="#pienso">Lo que pienso de ti</a>
+<a href="#carta">Carta final</a>
+</nav>
+
+<section id="inicio">
+<h1>Daniela 💕 Alex</h1>
+<h2 id="contador"></h2>
+</section>
+
+<section id="historia">
+<h1>Nuestra historia</h1>
+<p>Aquí podrás escribir su historia luego 💗</p>
+</section>
+
+<section id="momentos">
+<h1>Momentos juntos</h1>
+<div class="galeria">
+<p>Aquí podrás poner fotos fácilmente luego 📸</p>
+</div>
+</section>
+
+<section id="pienso">
+<h1>Lo que pienso de ti</h1>
+<p>Luego escribirás cosas bonitas aquí 💖</p>
+</section>
+
+<section id="carta">
+<h1>Carta final</h1>
+<p>
+Hola Mí amor, si estas viendo esto es por que si logre hacer esta pagina, amor mío que mas te puedo decir si eres todo lo que quiero en mi vida, eres una mujer increíble eres el amor de mi vida, agradezco poder pasar cada día junto a tu lado por que eso me mantiene feliz, gracias por absolutamente todo mi amor, sabes que te amo, y siempre lo hare, eres hermosa y bella y me enamoras todos los días con simplemente ser tu estoy muy agradecido de poder compartir mi vida junto a tu lado amor, no hay mas que decirte mas que un simple GRACIAS POR ESTAR CONMIGO......
+</p>
+</section>
+
+</div>
+
+<script>
+function entrar(){
+    let password="Galindos";
+    let input=document.getElementById("pass").value;
+    if(input===password){
+        document.getElementById("login").style.display="none";
+        document.getElementById("contenido").style.display="block";
+    }else{
+        alert("Contraseña incorrecta 💔");
+    }
+}
+
+// contador desde 02 sept 2025
+let inicio=new Date("2025-09-02");
+let hoy=new Date();
+let dias=Math.floor((hoy-inicio)/(1000*60*60*24));
+document.getElementById("contador").innerHTML="Llevamos "+dias+" días juntos 💕";
+</script>
+
+</body>
+</html>
